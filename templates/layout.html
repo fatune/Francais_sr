@@ -8,7 +8,6 @@ body{
 }
 h1{
     font-weight: normal;
-    color: #8ac640;
     font-size: 3.5em;
 }
 
@@ -18,46 +17,74 @@ p{
 }
 
 answer{
-    color: red;
+    color: #ff383f;
     font-weight: bold;
 }
 
 question1{
-    color: red;
+    color: #ff383f;
     font-weight: bold;
 }
 
 question2{
-    color: silver;
+    color: #a9a9a9;
+}
+
+frm{
+  border:1px black dashed; 
+  display: inline;
 }
 
 input[type=submit] {
   display: inline-block;
   margin: 0 10px 0 0;
   padding: 15px 45px;
-  font-size: 48px;
-  font-family: "Bitter",serif;
+  font-size: 1.5em;
   line-height: 1.8;
   appearance: none;
   box-shadow: none;
   border-radius: 0;
   color: #fff;
-  background-color: #6496c8;
-  text-shadow: -1px 1px #417cb8;
+  background-color: #A9A9A9;
+  text-shadow: -1px 1px #bebebe;
   border: none;
 }
 
+input[type=submit]#bad{
+  background-color:#ff383f;
+}
+
+input[type=submit]#bad:hover {
+  background-color:#b30006;
+}
+
+input[type=submit]#bad:active {
+  background-color:#660003;
+}
+
+input[type=submit]#good{
+  background-color:#66cc99;
+}
+
+input[type=submit]#good:hover {
+  background-color:#339966;
+}
+
+input[type=submit]#good:active {
+  background-color:#26734d;
+}
+
+
 input[type=submit]:hover {
-  background-color: #346392;
+  background-color: #595959;
   text-shadow: -1px 1px #27496d;
 }
 
 input[type=submit]:active {
-  background-color: #27496d;
+  background-color: #333333;
   text-shadow: -1px 1px #193047;
 }
 
- 
 </style>
  
 </head>

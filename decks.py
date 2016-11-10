@@ -1,30 +1,18 @@
 # -*- coding: utf-8 -*-
-to_learn_stack_etre = [["je","suis",0],
-                       ["tu","es",0],
-                       ["il","est",0],
-                       ["elle","est",0],
-                       ["nous","sommes",0],
-                       ["vous",u"êtes",0],
-                       ["ils","sont",0],
-                       ["elles","sont",0]]
 
-to_learn_stack_Ver = [["je","V-e",0],
-                      ["tu","V-es",0],
-                      ["il","V-e",0],
-                      ["elle","V-e",0],
-                      ["nous","V-ons",0],
-                      ["vous",u"V-ez",0],
-                      ["ils","V-ent",0],
-                      ["elles","V-ent",0]]
-
-to_learn_stack_avoir = [["je","'ai",0],
-                        ["tu","as",0],
-                        ["il","a",0],
-                        ["elle","a",0],
-                        ["nous","avons",0],
-                        ["vous","avez",0],
-                        ["ils","ont",0],
-                        ["elles","ont",0]]
+deck_avoir = {"name":"avoir",
+             "template":"deck.html", 
+             "title":u"avoir",
+             "questions":[["Je %s une pomme","'ai"], 
+                          ["Tu %s une pomme","as"], 
+                          ["Il %s une pomme","a"], 
+                          ["Elle %s une pomme","a"], 
+                          ["Nous %s une pomme","avons"], 
+                          ["Vous %s une pomme","avez"], 
+                          ["Ils %s une pomme","ont"], 
+                          ["Elles %s une pomme","ont"]], 
+             "qparser": lambda ptrn, dctn : ptrn % u"<question2>⟨ ? ⟩</question2>", 
+             "aparser": lambda ptrn, dctn : ptrn % ("<answer>%s</answer>" % dctn)}
 
 deck_etre = {"name":"etre", 
              "template":"deck.html", 
@@ -37,7 +25,20 @@ deck_etre = {"name":"etre",
                           ["Vous %s grandes",u"êtes"], 
                           ["Ils %s grandes","sont"], 
                           ["Elles %s grandes","sont"]], 
-             "qparser": lambda ptrn, dctn : ptrn % u"<question2>⟨ être ⟩</question2>", 
+             "qparser": lambda ptrn, dctn : ptrn % u"<question2>⟨ ? ⟩</question2>", 
              "aparser": lambda ptrn, dctn : ptrn % ("<answer>%s</answer>" % dctn)}
 
+deck_Ver = {"name":"Ver", 
+             "template":"deck.html", 
+             "title":u"V-er",
+             "questions":[["Je %s une pomme","mang<frm>e</frm>"], 
+                          ["Tu %s une pomme","mang<frm>es</frm>"], 
+                          ["Il %s une pomme","mang<frm>e</frm>"], 
+                          ["Elle %s une pomme","mang<frm>e</frm>"], 
+                          ["Nous %s une pomme","mang<frm>ons</frm>"], 
+                          ["Vous %s une pomme","mang<frm>ez</frm>"], 
+                          ["Ils %s une pomme","mang<frm>ent</frm>"], 
+                          ["Elles %s une pomme","mang<frm>ent</frm>"]], 
+             "qparser": lambda ptrn, dctn : ptrn % u"<question2>⟨ mang<frm>er</frm> ⟩</question2>", 
+             "aparser": lambda ptrn, dctn : ptrn % ("<answer>%s</answer>" % dctn)}
 

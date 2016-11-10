@@ -6,8 +6,8 @@ from sr import sr, sr2
 import decks
 
 decks = {"etre":   sr2(decks.deck_etre),
-         "Ver" :   sr (decks.to_learn_stack_Ver),
-       "avoir" : sr (decks.to_learn_stack_avoir)}
+         "Ver" :   sr2 (decks.deck_Ver),
+       "avoir" : sr2 (decks.deck_avoir)}
 
 @app.route("/")
 def index():
