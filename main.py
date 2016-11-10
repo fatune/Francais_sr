@@ -21,7 +21,7 @@ def members():
 def getMember(name):
     item = decks[name].get_next_item()
     question = item[0]
-    answer = ""
+    answer = u"⟨ être ⟩"
     return render_template('deck.html',**locals())
 
 

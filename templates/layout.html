@@ -9,13 +9,39 @@ body{
 h1{
     font-weight: normal;
     color: #8ac640;
+    font-size: 3.5em;
+}
+
+p{
+    font-weight: normal;
     font-size: 2.5em;
+}
+
+answer{
+    color: red;
+    font-weight: bold;
+}
+
+question1{
+    color: red;
+    font-weight: bold;
+}
+
+question2{
+    color: silver;
 }
  
 </style>
  
 </head>
 <body>
+
+<p> Je <question2>⟨ être ⟩</question2> grande </p>
+<p> Je <answer>suis</answer> grande </p>
+
+<p> Je <question2>⟨ <question1>mang</question1>er ⟩</question2> un pomme </p>
+<p> Je <answer>mange</answer> un pomme </p>
+
  {% block body %}{% endblock %}
  
 </body>
