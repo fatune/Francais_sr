@@ -1,14 +1,12 @@
 import random
 
-
 def return_next_index():
 	trial = random.uniform(0,1)
 	i = 0.0
 	while True:
-		if trial > 1/(2**i): break
+		if trial > 1/(3**i): break
 		i=i+1
 	return int(i) -1
-
 
 class sr:
 	stacks = []
@@ -24,7 +22,7 @@ class sr:
 	def get_next_item(self):
 		# add new element in fresh stack if there any to add
 		if not len(self.stacks[0])>self.fresh_stack_capacity and len(self.to_learn_stack) > 0:
-			self.stacks[0].append(self.to_learn_stack.pop())
+			self.stacks[0].append(self.to_learn_stack.pop(0))
 				
 		# chose next item
 		while True:
@@ -46,13 +44,3 @@ class sr:
 		if rate == +1 and current_stack < (len(self.stacks)-1): current_stack += 1
 		if rate == -1 and current_stack > 0 : current_stack -= 1
 		self.stacks[current_stack].append(self.current_item)
-
-		
-#to_learn_stack = [["je","suis",0],["tu","est",0],["nous","avons",0],["vous","aves",0],["ill","sont",0],["ell","sont",0],["ells","sont",0]]
-#
-#step = 0
-#spcrpt = sr(to_learn_stack)
-#while True:
-#	step +=1
-#	print spcrpt.get_next_item()
-#	spcrpt.rate_current_item(1)
