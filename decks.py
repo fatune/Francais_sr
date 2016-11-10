@@ -25,3 +25,19 @@ to_learn_stack_avoir = [["je","'ai",0],
                         ["vous","avez",0],
                         ["ils","ont",0],
                         ["elles","ont",0]]
+
+deck_etre = {"name":"etre", 
+             "template":"deck.html", 
+             "title":u"être",
+             "questions":[["Je %s grande","suis"], 
+                          ["Tu %s grande","es"], 
+                          ["Il %s grande","est"], 
+                          ["Elle %s grande","est"], 
+                          ["Nous %s grandes","sommes"], 
+                          ["Vous %s grandes",u"êtes"], 
+                          ["Ils %s grandes","sont"], 
+                          ["Elles %s grandes","sont"]], 
+             "qparser": lambda ptrn, dctn : ptrn % u"<être>", 
+             "aparser": lambda ptrn, dctn : ptrn % dctn}
+
+

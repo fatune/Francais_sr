@@ -2,10 +2,10 @@
 from flask import Flask, render_template, request
 app = Flask(__name__)
 
-from sr import sr
+from sr import sr, sr2
 import decks
 
-decks = {"etre":   sr(decks.to_learn_stack_etre),
+decks = {"etre":   sr2(decks.deck_etre),
          "Ver" :   sr (decks.to_learn_stack_Ver),
        "avoir" : sr (decks.to_learn_stack_avoir)}
 
