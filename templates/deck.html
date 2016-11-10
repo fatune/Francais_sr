@@ -2,16 +2,18 @@
 {% block body %}
  
 <div class="block1">
-<h1>Hello {{name}}!</h1>
-  <h2>{{question}} </h2>
+<h1>{{title}}</h1>
   <p>
-    {{answer}}
+    {{text}}
   </p>
 <form action="." method="POST">
+  {% if quest %}
   <p> <input type="submit" name="submit" value="Show answer"> </p>
+  {% else %}
   <input type="submit" name="submit" value="Bad">
   <input type="submit" name="submit" value="Norm">
   <input type="submit" name="submit" value="Good">
+  {% endif %}
 </form>
 </div>
 {% endblock %}

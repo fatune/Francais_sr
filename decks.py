@@ -37,7 +37,7 @@ deck_etre = {"name":"etre",
                           ["Vous %s grandes",u"êtes"], 
                           ["Ils %s grandes","sont"], 
                           ["Elles %s grandes","sont"]], 
-             "qparser": lambda ptrn, dctn : ptrn % u"<être>", 
-             "aparser": lambda ptrn, dctn : ptrn % dctn}
+             "qparser": lambda ptrn, dctn : ptrn % u"<question2>⟨ être ⟩</question2>", 
+             "aparser": lambda ptrn, dctn : ptrn % ("<answer>%s</answer>" % dctn)}
 
 
