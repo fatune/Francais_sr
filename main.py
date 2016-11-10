@@ -15,9 +15,9 @@ def index():
  
 @app.route("/decks")
 def members():
-    return "Decks"
+    return render_template('decks.html', decks = decks)
 
-@app.route("/decks/<string:name>/")
+@app.route("/deck/<string:name>/")
 def getMember(name):
     item = decks[name].get_next_item()
     question = item[0]
@@ -25,7 +25,7 @@ def getMember(name):
     return render_template('deck.html',**locals())
 
 
-@app.route("/decks/<string:name>/", methods=['POST'])
+@app.route("/deck/<string:name>/", methods=['POST'])
 def getMember_post(name):
     if request.method == 'POST':
         if request.form['submit'] == "Show answer":
