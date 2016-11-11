@@ -5,8 +5,14 @@ app = Flask(__name__)
 from sr import sr, sr2
 import decks
 
-decks = {"etre":   sr2(decks.deck_etre),
-         "Ver" :   sr2 (decks.deck_Ver),
+decks = {"etre": sr2(decks.deck_etre),
+         "Ver" : sr2 (decks.deck_Ver),
+         "Vir" : sr2 (decks.deck_Vir),
+         "faire" : sr2 (decks.deck_faire),
+         "aller" : sr2 (decks.deck_aller),
+         "vouloir" : sr2 (decks.deck_vouloir),
+         "pouvoir" : sr2 (decks.deck_pouvoir),
+         "devoir" : sr2 (decks.deck_devoir),
        "avoir" : sr2 (decks.deck_avoir)}
 
 @app.route("/")
@@ -31,6 +37,7 @@ def getMember_post(name):
         if request.form['submit'] == "Show answer":
             item = decks[name].get_last_item_again()
             title = decks[name].title
+            print(name, decks[name],decks[name].get_last_item_again, item)
             answer = item[1]
             return render_template('deck.html',text = Markup(answer), title = title )
         elif request.form['submit'] == "Bad":
@@ -40,7 +47,11 @@ def getMember_post(name):
         elif request.form['submit'] == "Good":
             rate = 1
 	decks[name].rate_current_item(rate) 
-        return getMember(name)
+        item = decks[name].get_next_item()
+        title = decks[name].title
+        question = item[0]
+        return render_template('deck.html', text = Markup(question), title = title,quest="1")
+        #return getMember(name)
     return "?"
  
 if __name__ == "__main__":
