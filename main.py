@@ -12,6 +12,7 @@ decks = {"etre": sr2(decks.deck_etre),
          "aller" : sr2(decks.deck_aller),
          "vouloir" : sr2(decks.deck_vouloir),
          "pouvoir" : sr2(decks.deck_pouvoir),
+         "possessives" : sr2(decks.deck_possessives),
          "devoir" : sr2(decks.deck_devoir),
        "avoir" : sr2(decks.deck_avoir)}
 

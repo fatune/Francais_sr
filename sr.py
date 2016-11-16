@@ -9,7 +9,7 @@ def return_next_index():
 	return int(i) -1
 
 class sr2:
-	def __init__(self, deck, fresh_stack_capacity = 5, number_of_stacks = 1):
+	def __init__(self, deck, fresh_stack_capacity = 5, number_of_stacks = 5):
                 self.__stacks = []
                 self.__current_item = None
 		self.name = deck["name"]

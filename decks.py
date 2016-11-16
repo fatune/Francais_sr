@@ -1,5 +1,33 @@
 # -*- coding: utf-8 -*-
 
+deck_possessives = {"name":"possessives",
+             "template":"deck.html", 
+             "title":u"Possessives",
+             "questions":[
+                          ["%s homme",["My","Mon"]],
+                          ["%s amis",["My","Mes"]],
+                          ["%s pomme",["My","Ma"]],
+                          ["%s homme",["Your","Ton"]],
+                          ["%s amis",["Your","Tes"]],
+                          ["%s pomme",["Your","Ta"]],
+                          ["%s homme",["Her","Son"]],
+                          ["%s amis",["Her","Ses"]],
+                          ["%s pomme",["Her","Sa"]],
+                          ["%s homme",["His","Son"]],
+                          ["%s amis",["His","Ses"]],
+                          ["%s pomme",["His","Sa"]],
+                          ["%s homme",["Its","Son"]],
+                          ["%s amis",["Its","Ses"]],
+                          ["%s pomme",["Its","Sa"]],
+                          ["%s amis",["Our","Nos"]],
+                          ["%s pomme",["Our","Notre"]],
+                          ["%s amis",["Your (plural)","Vos"]],
+                          ["%s pomme",["Your (plural)","Votre"]],
+                          ["%s amis",["Their","Leurs"]],
+                          ["%s pomme",["Their","Leur"]]],
+             "qparser": lambda ptrn, dctn : ptrn % (u"<question2>⟨ %s ⟩</question2>" % dctn[0]), 
+             "aparser": lambda ptrn, dctn : ptrn % ("<answer> %s </answer>" % dctn[1])} 
+
 deck_devoir = {"name":"devoir",
              "template":"deck.html", 
              "title":u"Devoir (to must)",
